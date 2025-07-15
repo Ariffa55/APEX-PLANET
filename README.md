@@ -20,3 +20,11 @@ I specialize in:
 This portfolio is a reflection of my learning, projects, and goals as I step into the tech world.
 
 
+
+
+
+
+
+
+
+
