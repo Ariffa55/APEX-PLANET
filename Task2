@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+    }
+
+    .contact-info {
+      background: linear-gradient(to bottom right, #2c3e50, #1a1a1a);
+      color: #fff;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+      color: #90ee90;
+    }
+
+    .contact-info p,
+    .contact-info a {
+      margin: 0.4rem 0;
+      color: #d4ffd4;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .contact-form {
+      background: #ffffff;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      color: #2c3e50;
+    }
+
+    .contact-form label {
+      margin-top: 1.2rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: block;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .form-row input {
+      flex: 1;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.4rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+      outline: none;
+    }
+
+    .contact-form button {
+      margin-top: 2rem;
+      padding: 0.8rem 1.5rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .contact-form button:hover {
+      background-color: #218838;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+        border-radius: 0;
+      }
+
+      .contact-info,
+      .contact-form {
+        border-radius: 0;
+        padding: 2rem;
+      }
+
+      .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>📍 Address</h2>
+      <p>Tech Park Tower, 4th Floor,</p>
+      <p>Outer Ring Road, Marathahalli, Bengaluru, Karnataka 560037</p>
+
+      <h2>📞 Let's Talk</h2>
+      <a href="tel:+918001236879">+91 9874563210</a>
+
+      <h2>📧 General Support</h2>
+      <a href="mailto:support@yourcompany.in">support@yourcompany.in</a>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send Us A Message</h2>
+      <form>
+        <div class="form-row">
+          <div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="First name" required />
+          </div>
+          <div>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Last name" required />
+          </div>
+        </div>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Eg. example@email.com" required />
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" placeholder="Eg. +91 8000000000" />
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write us a message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Message has been sent!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
