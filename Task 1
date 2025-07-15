@@ -1,145 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Poojitha's Portfolio</title>
+  <title>Shaik Ariffa's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
-      height: 100%;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
       color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
       transition: background-color 0.3s, color 0.3s;
     }
 
     body.dark-mode {
       background-color: #121212;
-      color: #eee;
+      color: #f0f0f0;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
     }
 
     h1 {
-      color: #4CAF50;
-      margin-bottom: 10px;
+      font-size: 2.5em;
+      color: #2c3e50;
     }
 
-    .content {
-      display: flex;
-      gap: 20px;
-      align-items: center;
+    .intro {
+      text-align: center;
+      font-size: 1.2em;
       max-width: 900px;
-      width: 100%;
-      justify-content: center;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+      padding: 0 20px;
     }
 
-    p {
-      max-width: 400px;
-      font-size: 18px;
-      line-height: 1.5;
-      text-align: left;
-      margin: 0;
+    .highlight {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 25px;
+      width: 300px;
+      transition: transform 0.3s;
+    }
+
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #4CAF50;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #4CAF50;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 15px;
+      margin: 5px;
+      font-size: 14px;
     }
 
     img {
-      width: 150px;
-      border-radius: 10px;
-      object-fit: cover;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-    img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    }
-
-    button, .dark-mode-toggle {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
+      width: 140px;
+      border-radius: 50%;
       margin-top: 20px;
-      transition: background-color 0.3s ease;
-    }
-    button:hover, .dark-mode-toggle:hover {
-      background-color: #45a049;
     }
 
-    /* Contact Section */
-    #contact {
-      margin-top: 50px;
-      max-width: 600px;
-      text-align: center;
-    }
-
-    /* Social Icons */
     .social-icons {
-      margin-top: 20px;
+      margin: 20px;
       display: flex;
-      gap: 15px;
       justify-content: center;
+      gap: 20px;
     }
+
     .social-icons a {
       color: #4CAF50;
       font-size: 24px;
       text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .social-icons a:hover {
-      color: #388e3c;
+      transition: color 0.3s;
     }
 
-    /* Responsive */
-    @media(max-width: 600px) {
-      .content {
-        flex-direction: column;
-        align-items: center;
-      }
-      p {
-        text-align: center;
+    .social-icons a:hover {
+      color: #2e7d32;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 16px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .buttons button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .buttons button:hover {
+      background-color: #388e3c;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
       }
     }
   </style>
-  <!-- FontAwesome for social icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Welcome to My Portfolio</h1>
-  <div class="content">
-    <p>
-      Hello! I'm Poojitha,<br>
-      an aspiring web developer passionate about creating beautiful and user-friendly websites.<br>
-      I enjoy learning new technologies and continuously improving my skills in HTML, CSS, and JavaScript.<br>  
-      This portfolio is a glimpse of my journey into the world of web development.
+
+  <header>
+    <h1>Shaik Ariffa</h1>
+    <p class="intro">
+      I’m an enthusiastic <span class="highlight">Computer Science student</span> from Andhra University College of Engineering for Women, with a deep interest in emerging technologies like <span class="highlight">Artificial Intelligence</span> and <span class="highlight">Web Development</span>. I aim to build innovative solutions and contribute to the future of technology. Scroll down to know more about my skills, projects, and journey!
     </p>
-    <img src="https://th.bing.com/th/id/OIP.7WA6mH7oqsGTo_duc43GqwHaHa?w=192&h=192&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Poojitha's Photo" />
+    <img src="https://th.bing.com/th/id/OIP.7WA6mH7oqsGTo_duc43GqwHaHa?w=192&h=192&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Shaik Ariffa" />
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h3>🎓 Education</h3>
+      <p>
+        Final year B.Tech student in Computer Science and Engineering at <strong>Andhra University College of Engineering for Women</strong>, Visakhapatnam. 
+      </p>
+      <p>Currently focused on research and implementation of AI-based systems.</p>
+    </div>
+
+    <div class="card">
+      <h3>💡 Project: Heart Disease Prediction</h3>
+      <p>
+        Developed a Machine Learning model to predict the chances of heart disease using real-world health datasets.
+        Implemented using Python, Pandas, Scikit-learn, and deployed via Flask. The project aids in early diagnosis by analyzing critical health parameters.
+      </p>
+    </div>
+
+    <div class="card skills">
+      <h3>🛠️ Skills</h3>
+      <span>Python</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Machine Learning</span>
+      <span>Flask</span>
+      <span>Git & GitHub</span>
+      <span>Responsive Web Design</span>
+    </div>
+
   </div>
 
-  <button onclick="alert('Thanks for visiting!')">Click Me</button>
-  
-  <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <div class="buttons">
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">📬 Contact Me</button>
+  </div>
 
   <div class="social-icons">
-    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/shaikariffa" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/shaikariffa" target="_blank"><i class="fab fa-github"></i></a>
   </div>
 
-  <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-    Contact Me
-  </button>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: poojitha@example.com</p>
+  <footer id="contact">
+    <h3>📞 Contact</h3>
+    <p>Email: <a href="mailto:shaikariffa55@gmail.com">shaikariffa55@gmail.com</a></p>
     <p>Phone: +91 12345 67890</p>
-  </section>
+    <p>Thank you for visiting my portfolio!</p>
+  </footer>
 
   <script>
     function toggleDarkMode() {
